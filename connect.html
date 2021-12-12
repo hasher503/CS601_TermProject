@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hope Asher | Contact Me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script src="JS/connect.js" defer> </script>
+
+</head>
+
+<body>
+    <!--Site Navigation-->
+    <header>
+        <nav>
+            <ul class="navlist">
+                <li id="hlogo">
+                    h
+                </li>
+                <li>
+                    <a href=" index.html">About</a>
+                </li>
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+                <li>
+                    <a href="connect.html">Connect</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content-->
+    <main class="wrapper">
+        <aside class="social">
+
+            <a href="https://www.linkedin.com/in/hope-asher/" target="_blank">
+                <img src="images/li-icon.png" alt="LinkedIn logo" title="LinkedIn"></a>
+
+            <a href="https://github.com/hasher503" target="_blank">
+                <img src=" images/github-icon.png" alt="GitHub logo" title="GitHub">
+            </a>
+
+            <a href="https://www.youtube.com/channel/UCKPmFPCbDkJRVvB2hHMlVHA" target="_blank">
+                <img src="images/youtube-icon.png" alt="Youtube logo" title="YouTube">
+            </a>
+
+            <address>
+                <a href="mailto:hasher503@gmail.com">
+                    <img src="images/email-logo.png" alt="Email logo" title="Email">
+                </a>
+            </address>
+
+        </aside>
+
+
+        <section class="blocktext">
+            <h1> Drop Me A Note</h1>
+
+            <!--form does not really go to google, submission is prevented in JS. hyperlink included so HTML validates-->
+            <form action="google.com" method="post" id="form">
+                <div class="form-control name-input">
+                    <label for="first">First</label>
+                    <input type="text" name="first" id="first" autocomplete="off" required>
+                    <div class="form-alert" id="first-alert"></div>
+                </div>
+                <div class="form-control name-input">
+                    <label for="last">Last</label>
+                    <input type="text" name="last" id="last" autocomplete="off" required>
+                    <div class="form-alert" id="last-alert"></div>
+                </div>
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" autocomplete="off" required>
+                    <div class="form-alert" id="email-alert"></div>
+                </div>
+                <div class="form-control">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" required></textarea>
+                    <div class="form-alert" id="message-alert"></div>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+
+
+        </section>
+    </main>
+
+    <!-- form submission modal (hidden by default) -->
+    <div id="modalScreen">
+        <div id="modalContent">
+            <div id="closeModalBar">
+                <button id="closeModal">&times;</button>
+            </div>
+            <p id="modalGreeting">Thanks for your note! I'll get back to you soon.</p>
+        </div>
+
+    </div>
+
+    <!--Footer-->
+    <footer class="sticky">
+        &copy; 2021 Hope Asher
+    </footer>
+
+</body>
+
+</html>

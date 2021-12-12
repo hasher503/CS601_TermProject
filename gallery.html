@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Hope Asher | My Projects
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!--Vue and JS-->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="JS/gallery.js" defer></script>
+
+</head>
+
+<body>
+    <!--Site Navigation-->
+    <header>
+        <nav>
+            <ul class="navlist">
+                <li id="hlogo">
+                    h
+                </li>
+                <li>
+                    <a href="index.html">About</a>
+                </li>
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+                <li>
+                    <a href="connect.html">Connect</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Main content/ Vue Container-->
+    <!--listening for mousemove so that image buttons will always be visible while mouse is moving-->
+    <main class="wrapper" id="app" @mousemove="mouseMove">
+
+        <!-- thumbnail images-->
+        <div v-if="! showSlideshow" class="thumbnail-container">
+            <template v-for="image, index in images">
+                <img :src="image.url" :alt="image.alt" class="thumbnail" @click="startSlideshow(index)">
+            </template>
+        </div>
+
+
+        <!-- expanding full-size gallery -->
+        <div v-if="showSlideshow" class="galleryImageContainer">
+
+            <!--all buttons listen for click, mouse entering, and mouse leaving events to trigger Vue methods-->
+            <button class="galleryButton" id="prevButton" @click="decrement" @mouseenter="mouseEnterButton"
+                @mouseleave="mouseLeaveButton" v-show=" showButtons">
+                &#10094;
+            </button>
+
+            <img :src="currentImage.url" :alt="currentImage.alt" class="galleryImage">
+
+            <button class="galleryButton" id="closeButton" v-show="showButtons" @click="stopSlideshow"
+                @mouseenter="mouseEnterButton" @mouseleave="mouseLeaveButton"> &times;
+            </button>
+
+            <button class="galleryButton" id="nextButton" v-show="showButtons" @click="increment"
+                @mouseenter="mouseEnterButton" @mouseleave="mouseLeaveButton"> &#10095; </button>
+        </div>
+
+
+        <!--rendered only if JavaScript is disabled-->
+        <noscript class="warning"><strong>Please enable JavaScript to view this page.</strong></noscript>
+
+    </main>
+
+    <!--Footer-->
+    <footer class="sticky">
+        &copy; 2021 Hope Asher
+    </footer>
+
+</body>
+
+</html>

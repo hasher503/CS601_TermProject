@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Hope Asher | My Projects
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!--Vue and JS-->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="JS/projects.js" defer></script>
+
+    <!--the HTML template for the reusable video card component-->
+    <!--defined here rather than in videoComponent.js for HTML readability-->
+    <script type="text/x-template" id="video-template">
+        <section class="videodisplay">
+            <iframe :src="project.url" title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <div class="padding">
+                <div class="gitflex">
+                    <h3>{{ project.title }}</h3>
+                    <a class="gitlink" :href="project.git" target="_blank">github</a>
+                </div>
+                <p>{{ project.description }}</p>
+            </div>
+        </section>
+    </script>
+</head>
+
+<body>
+    <!--Site Navigation-->
+    <header>
+        <nav>
+            <ul class="navlist">
+                <li id="hlogo">
+                    h
+                </li>
+                <li>
+                    <a href="index.html">About</a>
+                </li>
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+                <li>
+                    <a href="connect.html">Connect</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Main content/ Vue Container-->
+    <main class="wrapper" id="app">
+        <div class="pastprojects">
+            <h1> Past Projects </h1>
+        </div>
+        <!-- Create new Vue component for each project from JSON file-->
+        <template v-for="project in projectArray">
+            <video-card :project="project">
+            </video-card>
+        </template>
+
+        <!--rendered only if JavaScript is disabled-->
+        <noscript class="warning"><strong>Please enable JavaScript to view this page.</strong></noscript>
+
+    </main>
+
+    <!--Footer-->
+    <footer>
+        &copy; 2021 Hope Asher
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Pure Training",
+        "url": "https://www.youtube.com/embed/m3ON8CZSg8o",
+        "git": "https://github.com/hasher503/Pure_Training",
+        "description": "A web app for personal trainers and their clients to track weightlifting workouts and see their strength improvements over time. It uses HTML, CSS and JavaScript for the front end and Python and Django on the back end (accessing databases through Django models)."
+    },
+    {
+        "title": "Time-Off Tracker",
+        "url": "https://www.youtube.com/embed/u9AkfSJnACE",
+        "git": "https://github.com/hasher503/CS50_TimeOff_Tracker",
+        "description": "A web app for staff managers and HR professionals to track their employees' time-off hours and requests. It uses HTML and CSS with Bootstrap on the front end, and Python with Flask and a SQLite database connection on the back end."
+    },
+    {
+        "title": "Mail",
+        "url": "https://www.youtube.com/embed/LAfUUua-gYM",
+        "git": "https://github.com/hasher503/CS50_mail",
+        "description": "A simple email website using Python and Django. This project uses all JavaScript for the different page views rather than reloading different pages for different mailboxes."
+    },
+    {
+        "title": "Search",
+        "url": "https://www.youtube.com/embed/p1qkUJmiixc",
+        "git": "https://github.com/hasher503/CS50_search",
+        "description": "This project visually replicates Google's home search page, image search, and advanced search. The search queries within this clone site are sent to Google."
+    },
+    {
+        "title": "Wiki",
+        "url": "https://www.youtube.com/embed/BiYfpEJ-KiY",
+        "git": "https://github.com/hasher503/CS50_wiki",
+        "description": "A mock-wikipedia site for uploading and editing encyclopedia entries in Markdown. Made using Django."
+    },
+    {
+        "title": "Commerce",
+        "url": "https://www.youtube.com/embed/XIiaO75g8oQ",
+        "git": "https://github.com/hasher503/CS50_commerce",
+        "description": "An online auction site with Python and Django."
+    },
+    {
+        "title": "Network",
+        "url": "https://www.youtube.com/embed/Co26AK6KX90",
+        "git": "https://github.com/hasher503/CS50_network",
+        "description": "A twitter-like social network for users to post and like status updates. Made using Django."
+    }
+]

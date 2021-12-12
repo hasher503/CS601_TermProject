@@ -1,0 +1,509 @@
+/*
+Hope Asher
+CS601 Term Project
+*/
+
+
+/* color variables to keep track of palette */
+:root {
+    --palepink: #FFFBF8;
+    --eggplant: #22223B;
+    --slate: #5b5d66;
+    --lilac: #cdb4db;
+    --shadow: #9a8c98;
+    --lightgray: #e5e5e5;
+    --medgray: #ced4da;
+    --warning: #e63946;
+    --gitblue: #0969DA;
+  }
+
+
+/* color gradient that stretches to bottom of content or viewport without repeating */
+body {
+    color: var(--slate);
+    font-family: Helvetica, sans-serif;
+    font-weight: 325;
+    height: 100%;
+    background-image: linear-gradient(var(--palepink), var(--medgray));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* NAV and LINK styles */
+/* almost all links (github links overriden in PROJECT styles) */
+a {
+    color: var(--eggplant);
+    text-decoration: none;
+    font-weight: 450;
+}
+a:hover {
+    color: var(--slate);
+    text-shadow: 1px 1px var(--shadow);
+}
+
+/* navigation links */
+.navlist a {
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-weight: 300;
+}
+
+/* navigation header */
+nav {
+    background-image: linear-gradient(var(--palepink), var(--medgray));
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+/* reset list default style */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* list with class navlist (this is the container for nav links) */
+ul.navlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+/* all list items within the navbar */
+.navlist > li {
+    display: block;
+    margin: 5px 10px;
+}
+
+#hlogo {
+    margin-right: auto;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--lilac);
+    text-shadow: 1px 1px 3px var(--slate);
+}
+/* end of NAV styling */
+
+
+/* image styles */
+img.shadow {
+    border-radius: 100%;
+    border: 5px solid white;
+    box-shadow: -20px -20px var(--shadow);
+    margin-top: 20px; /* aligns container top to the top of the shadow */
+}
+
+/* table styles */
+table {
+    margin: auto;
+    background-color: white;
+    border: 1px solid var(--slate);
+}
+th {
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 0.5rem;
+    background-color: var(--lightgray);
+}
+td {
+    padding: 0.5rem;
+}
+tr:nth-child(even) {
+    background-color: var(--lightgray);
+}
+/* end of TABLE styles */
+
+
+/* text: headings and footers */
+h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+footer {
+    text-align: center;
+    color: var(--eggplant);
+    width: 100%;
+}
+/* footers on pages where content doesn't fill screen */
+footer.sticky {
+    position: absolute;
+    z-index: -2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* text: paragraphs */
+p {
+    text-align: justify;
+}
+
+/* Flex container for the main content below navbar */
+.wrapper {
+    margin: 5rem auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* section styles */
+section {
+    background-color: white;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 .2rem .5rem 0 var(--shadow);
+}
+
+/* section containers for text */
+.blocktext {
+    max-width: 40rem;
+    padding: 1.5rem;
+}
+
+
+/* PAST PROJECTS page */
+
+/* section containers for youtube video cards */
+.videodisplay {
+    max-width: 560px;
+}
+
+.padding {
+    padding: .5rem 1.5rem;
+}
+
+.pastprojects {
+    width: 100%;
+    margin: 0 auto 1rem 8%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* tutorial from https://www.w3schools.com/howto/howto_css_cards.asp */
+.videodisplay:hover {
+    box-shadow: 0 .5rem 1rem 0 var(--shadow);
+}
+
+/* youtube videos sizing and rounded top to fit within their container */
+iframe {
+    width: 560px;
+    height: 315px;
+    border: none;
+}
+
+/* container to align project Title and Git Link */
+.gitflex {
+    display: flex;
+    align-items: center;
+}
+
+/* links to github repos */
+a.gitlink {
+    font-family: 'Andale Mono', monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--gitblue);
+    margin-left: 1rem;
+}
+
+a.gitlink:hover {
+    color: var(--gitblue);
+    text-shadow: none;
+    text-decoration: underline;
+}
+
+/* Warning alert if JSON data can't be retrieved */
+.warning {
+    margin: 1rem;
+    color: var(--warning);
+}
+/* end of PAST PROJECTS */
+
+
+/* GALLERY styles */
+
+/* div container for all thumbnail images */
+.thumbnail-container {
+    width: 100%;
+    padding: 0 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* thumbnail images */
+.thumbnail {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    object-fit: cover;
+    border: 2px solid var(--eggplant);
+    margin: 2px;
+    cursor: pointer;
+}
+.thumbnail:hover {
+    opacity: .5;
+}
+
+/* container for full-size images */
+.galleryImage {
+    max-width: 100%;
+
+}
+
+.galleryImageContainer {
+    display: inline-block;
+    position: relative; /* so that buttons are placed within image */
+}
+
+/* previous, next, and close buttons */
+.galleryButton {
+    color: white;
+    font-size: 3rem;
+    border: 0;
+    cursor: pointer;
+    /* make it opaque without text becoming opaque */
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+}
+
+.galleryButton:hover {
+    background:rgba(0, 0, 0, .5)
+}
+#closeButton {
+    top: 0;
+    right: 0;
+}
+#prevButton {
+    top: 50%;
+    left: 0;
+}
+#nextButton {
+    top: 50%;
+    right: 0;
+}
+
+
+/* CONTACT ME styles */
+/* social div */
+.social {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* make section transparent without making links transparent */
+    background-color: rgba(0, 0, 0, 0);
+
+}
+.social img {
+    width: 50px;
+    margin: .5rem;
+    padding: .5rem;
+}
+.social img:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+/* Form section */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-control label {
+    display: block;
+    margin: 1.5rem 0 0 0;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.name-input {
+    width: 48%;
+}
+
+.form-control input, textarea {
+    width: 100%;
+    border: none;
+    background-color: var(--lightgray);
+    margin: .5rem 1rem 0 0;
+    font: inherit;
+}
+.form-control input {
+    height: 1.5rem;
+}
+.form-control textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.form-control input:focus, textarea:focus {
+    outline: 1px solid var(--lilac);
+}
+
+.form-alert {
+    font-style: italic;
+    color: var(--warning);
+}
+
+form button {
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    background-color: var(--eggplant);
+    border: none;
+    padding: .5rem;
+    margin: 1rem 0 0 0;
+}
+
+form button:hover {
+    opacity: .5;
+}
+
+/* Form submission popup MODAL styles */
+/* remixed from https://www.w3schools.com/howto/howto_css_modals.asp tutorial */
+
+/* Modal opaque black background */
+#modalScreen {
+    display: none; /* starts hidden and enabled with form submission */
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4); /* black w/ opacity */
+}
+  
+/* Modal box content */
+#modalContent {
+    position: relative; /* so that the closeModal button stays in the box */
+    background-color: white;
+    margin: 15% auto;
+    border: 1px solid var(--eggplant);
+    width: 60%;
+}
+#modalContent p {
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+#closeModalBar {
+    height: 50px;
+    background-color: var(--eggplant);
+}
+
+/* X button to close the modal */
+#closeModal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    font-size: 3rem;
+    border: 0;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    
+}
+
+
+/* end of Contact Me Page styles */
+
+
+
+
+/* MEDIA QUERIES: responsive design and pared-down styles */
+
+/* keep thumbnail layout looking good as screen reduces */
+@media screen and (max-width: 1335px) {
+    .thumbnail-container {
+        padding: 0 15%;
+    }
+}
+@media screen and (max-width: 1146px) {
+    .thumbnail-container {
+        padding: 0 9%;
+    }
+}
+@media screen and (max-width: 787px) {
+    .thumbnail-container {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 818px) {
+    /* CONNECT page */
+    /* change flex-direction to row */
+    .social {
+        flex-direction: row;
+    }
+}
+
+/* Phone screens under 768 px */
+@media screen and (max-width: 768px) {
+
+    /* increase margin so content isn't hidden behind navbar */
+    .wrapper {
+        margin: 9rem auto 1rem auto;
+    }
+
+
+    /* NAVIGATION */
+    /* hide H logo */
+    #hlogo {
+        display: none;
+    }
+    /* stack nav links vertically */
+    ul.navlist {
+        flex-direction: column;
+    }
+    /* make navigation links larger for easy selection on touch screen */
+    .navlist > li {
+        font-size: 1.2rem;
+    }
+
+
+    /* PAST PROJECTS */
+    /* make the sections centered when the items are stacked vertically */
+    .blocktext, .videodisplay {
+        margin: 1rem auto;
+    }
+    /* make youtube videos fit to fill small screen */
+    iframe {
+        width: 100%;
+    }
+    /* align Past Projects heading to center */
+    #pastprojects {
+        margin: 0;
+        justify-content: center;
+    }
+
+    /* CONTACT page */
+    #modalContent {
+        width: 90%;
+    }
+
+}
+
+/* Printed pages */
+@media print {
+
+/* hide the whole navbar if printing */
+    nav {
+        display: none;
+    }
+
+    /* remove whitespace at top when printing */
+    .wrapper {
+        padding-top: 0rem;
+    }
+}
