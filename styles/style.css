@@ -290,7 +290,7 @@ a.gitlink:hover {
 }
 
 
-/* CONTACT ME styles */
+/* CONNECT PAGE styles */
 /* social div */
 .social {
     display: flex;
@@ -368,6 +368,7 @@ form button {
 form button:hover {
     opacity: .5;
 }
+/* end of form styles */
 
 /* Form submission popup MODAL styles */
 /* remixed from https://www.w3schools.com/howto/howto_css_modals.asp tutorial */

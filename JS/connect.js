@@ -49,18 +49,23 @@ document.querySelector("form").addEventListener("submit", event => {
     // validate using helper functions below
     if (checkName(first) && checkName(last) && checkEmail(email) && checkMessage(message)) {
 
-        // save the form information to localStorage
-        localStorage.setItem('first', first.value);
-        localStorage.setItem('last', last.value);
-        localStorage.setItem('email', email.value);
-        localStorage.setItem('message', message.value);
+        // save the form information to localStorage as its own object
+        const formData = {
+            'first': first.value,
+            'last': last.value,
+            'email': email.value,
+            'message': message.value
+        };
+        // need to stringify the object so localStorage can hold it
+        localStorage.setItem('formData', JSON.stringify(formData));
 
         // display form submission modal (functions to close the modal are below)
         modal.style.display = "block";
 
-        // retrieve name from localStorage and insert into modal text
+        // retrieve name from parsing localStorage object and insert into modal greeting text
+        const nameGreet = JSON.parse(localStorage.getItem("formData")).first;
         document.querySelector("#modalGreeting").innerHTML = `Thanks for your note, 
-                ${localStorage.getItem("first")}! I'll get back to you soon.`
+                ${nameGreet}! I'll get back to you soon.`
 
         // clear out all the form input values
         fieldArray.forEach(field => {
