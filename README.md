@@ -1,9 +1,9 @@
 # Front-End Design Term Project
 ## Boston University MET CS 601
 
-**Hosted here:*** cs601-termproject.netlify.app
+**Hosted here:** cs601-termproject.netlify.app
 
-**Tech Stack:*** HTML, CSS, JavaScript, and Vue
+**Tech Stack:** HTML, CSS, JavaScript, and Vue
 
 ### Overview
 This project is a mutli-page website designed to showcase the skills learned in Boston University's CS601, including but not limited to the following topics:
