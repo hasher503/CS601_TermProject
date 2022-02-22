@@ -1,13 +1,17 @@
-# Hope Asher's Term Project
+# Front-End Design Term Project
 ## Boston University MET CS 601
 
+**Hosted here:** cs601-termproject.netlify.app
+
+**Tech Stack:** HTML, CSS, JavaScript, and Vue
+
 ### Overview
-This project is a mutli-page website designed to showcase the skills learned in CS601, including but not limited to the following topics:
-*HTML5 including semantic elements
-*CSS: box model, inheritance, accessibility, aesthetics
-*responsive design with media queries and Flexbox
-*JavaScript including ES6, let and const, arrow functions, forEach(), localStorage, DOM manipulation
-*Vue framework including components, methods, computed properties, directives, interpolation, conditional rendering
+This project is a mutli-page website designed to showcase the skills learned in Boston University's CS601, including but not limited to the following topics:
+* HTML5 including semantic elements
+* CSS: box model, inheritance, accessibility, aesthetics
+* responsive design with media queries and Flexbox
+* JavaScript including ES6, let and const, arrow functions, forEach(), localStorage, DOM manipulation
+* Vue framework including components, methods, computed properties, directives, interpolation, conditional rendering
 
 #### Index Page
 This page is a basic introduction about me, my background, my education experience, and my hobbies. There's no JavaScript involved on this page and its main purpose is to allow the reader to get to know me, as well as showcasing a beautiful design and comprehensive HTML/CSS knowledge.
@@ -19,4 +23,4 @@ This page displays past web development projects that I have written, each conta
 This page displays a responsive gallery of thumbnails of photographs I have taken (just for fun, on an iPhone camera). When any image is clicked, the gallery view is replaced by a full-screen image slideshow. The slideshow can be clicked through in a carousel fashion--when you get to the end of the image list, the first image is displayed again. The "next image, previous image, and close slideshow" buttons disappear when the mouse is not moving or hovered over a button, to allow the user to focus on the image without obstruction. This page is designed using Vue. It does not use child components besides the main Vue app but utilizes methods, computed properties, data attributes, v-binding, and other directives to render the gallery, slideshow, and hiding button functionality.
 
 #### Connect Page
-This page has an aside that allows the viewer to find me on GitHub, LinkedIn, YouTube, and through email. These links all open in a separate tab. The main focus of the page is a Contact form, which allows the viewer to send me a message. IMPORTANT: at this time, since this is a static front-end only project, the form does not submit. Still, it demonstrates comprehensive knowledge of JavaScript events, form validation, regular expressions, template strings, arrow functions, and DOM manipulation. When the user enters text in the form, the inputs are validated and dynamic alerts are written to the DOM when the input is invalid. After "submit" is clicked, the form data is checked again and then, if valid, the user's data is saved to localStorage using JSON.stringify. A Modal then pops up thanking the user for their submission, retrieving the user's name from localStorage to personally greet them. The Modal can be closed using the X button or by clicking anywhere else on the page outside of the text box.
+This page has an aside that allows the viewer to find me on GitHub, LinkedIn, YouTube, and through email. These links all open in a separate tab. The main focus of the page is a Contact form, which allows the viewer to send me a message. IMPORTANT: since this is a static front-end only project, the form does not submit. Still, it demonstrates comprehensive knowledge of JavaScript events, form validation, regular expressions, template strings, arrow functions, and DOM manipulation. When the user enters text in the form, the inputs are validated and dynamic alerts are written to the DOM when the input is invalid. After "submit" is clicked, the form data is checked again and then, if valid, the user's data is saved to localStorage using JSON.stringify. A Modal then pops up thanking the user for their submission, retrieving the user's name from localStorage to personally greet them. The Modal can be closed using the X button or by clicking anywhere else on the page outside of the text box.
