@@ -1,6 +1,6 @@
 # Personal Page: Front-End Design Project
 
-## [Hosted on Netlify, check it out!](cs601-termproject.netlify.app)
+## [Hosted on Netlify, check it out!](https://cs601-termproject.netlify.app)
 
 ## Tech Stack
 * JavaScript
