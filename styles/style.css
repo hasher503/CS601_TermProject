@@ -1,5 +1,5 @@
 /*
-Hope Asher
+Hope Neels
 CS601 Term Project
 */
 
@@ -15,7 +15,7 @@ CS601 Term Project
     --medgray: #ced4da;
     --warning: #e63946;
     --gitblue: #0969DA;
-  }
+}
 
 
 /* color gradient that stretches to bottom of content or viewport without repeating */
@@ -36,6 +36,7 @@ a {
     text-decoration: none;
     font-weight: 450;
 }
+
 a:hover {
     color: var(--slate);
     text-shadow: 1px 1px var(--shadow);
@@ -75,7 +76,7 @@ ul.navlist {
 }
 
 /* all list items within the navbar */
-.navlist > li {
+.navlist>li {
     display: block;
     margin: 5px 10px;
 }
@@ -87,6 +88,7 @@ ul.navlist {
     color: var(--lilac);
     text-shadow: 1px 1px 3px var(--slate);
 }
+
 /* end of NAV styling */
 
 
@@ -95,7 +97,8 @@ img.shadow {
     border-radius: 100%;
     border: 5px solid white;
     box-shadow: -20px -20px var(--shadow);
-    margin-top: 20px; /* aligns container top to the top of the shadow */
+    margin-top: 20px;
+    /* aligns container top to the top of the shadow */
 }
 
 /* table styles */
@@ -104,18 +107,22 @@ table {
     background-color: white;
     border: 1px solid var(--slate);
 }
+
 th {
     text-transform: uppercase;
     font-weight: 900;
     padding: 0.5rem;
     background-color: var(--lightgray);
 }
+
 td {
     padding: 0.5rem;
 }
+
 tr:nth-child(even) {
     background-color: var(--lightgray);
 }
+
 /* end of TABLE styles */
 
 
@@ -125,11 +132,13 @@ h1 {
     font-size: 2.5rem;
     margin: 1rem 0;
 }
+
 footer {
     text-align: center;
     color: var(--eggplant);
     width: 100%;
 }
+
 /* footers on pages where content doesn't fill screen */
 footer.sticky {
     position: absolute;
@@ -223,6 +232,7 @@ a.gitlink:hover {
     margin: 1rem;
     color: var(--warning);
 }
+
 /* end of PAST PROJECTS */
 
 
@@ -247,6 +257,7 @@ a.gitlink:hover {
     margin: 2px;
     cursor: pointer;
 }
+
 .thumbnail:hover {
     opacity: .5;
 }
@@ -259,7 +270,8 @@ a.gitlink:hover {
 
 .galleryImageContainer {
     display: inline-block;
-    position: relative; /* so that buttons are placed within image */
+    position: relative;
+    /* so that buttons are placed within image */
 }
 
 /* previous, next, and close buttons */
@@ -274,16 +286,19 @@ a.gitlink:hover {
 }
 
 .galleryButton:hover {
-    background:rgba(0, 0, 0, .5)
+    background: rgba(0, 0, 0, .5)
 }
+
 #closeButton {
     top: 0;
     right: 0;
 }
+
 #prevButton {
     top: 50%;
     left: 0;
 }
+
 #nextButton {
     top: 50%;
     right: 0;
@@ -300,11 +315,13 @@ a.gitlink:hover {
     background-color: rgba(0, 0, 0, 0);
 
 }
+
 .social img {
     width: 50px;
     margin: .5rem;
     padding: .5rem;
 }
+
 .social img:hover {
     opacity: 70%;
     cursor: pointer;
@@ -330,22 +347,26 @@ form {
     width: 48%;
 }
 
-.form-control input, textarea {
+.form-control input,
+textarea {
     width: 100%;
     border: none;
     background-color: var(--lightgray);
     margin: .5rem 1rem 0 0;
     font: inherit;
 }
+
 .form-control input {
     height: 1.5rem;
 }
+
 .form-control textarea {
     height: 150px;
     resize: vertical;
 }
 
-.form-control input:focus, textarea:focus {
+.form-control input:focus,
+textarea:focus {
     outline: 1px solid var(--lilac);
 }
 
@@ -368,6 +389,7 @@ form button {
 form button:hover {
     opacity: .5;
 }
+
 /* end of form styles */
 
 /* Form submission popup MODAL styles */
@@ -375,24 +397,28 @@ form button:hover {
 
 /* Modal opaque black background */
 #modalScreen {
-    display: none; /* starts hidden and enabled with form submission */
+    display: none;
+    /* starts hidden and enabled with form submission */
     position: fixed;
     left: 0;
     top: 0;
     z-index: 3;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.4); /* black w/ opacity */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* black w/ opacity */
 }
-  
+
 /* Modal box content */
 #modalContent {
-    position: relative; /* so that the closeModal button stays in the box */
+    position: relative;
+    /* so that the closeModal button stays in the box */
     background-color: white;
     margin: 15% auto;
     border: 1px solid var(--eggplant);
     width: 60%;
 }
+
 #modalContent p {
     padding: 20px;
     font-size: 1.2rem;
@@ -413,7 +439,7 @@ form button:hover {
     border: 0;
     cursor: pointer;
     background: rgba(0, 0, 0, 0);
-    
+
 }
 
 
@@ -430,11 +456,13 @@ form button:hover {
         padding: 0 15%;
     }
 }
+
 @media screen and (max-width: 1146px) {
     .thumbnail-container {
         padding: 0 9%;
     }
 }
+
 @media screen and (max-width: 787px) {
     .thumbnail-container {
         padding: 0;
@@ -442,6 +470,7 @@ form button:hover {
 }
 
 @media screen and (max-width: 818px) {
+
     /* CONNECT page */
     /* change flex-direction to row */
     .social {
@@ -463,25 +492,30 @@ form button:hover {
     #hlogo {
         display: none;
     }
+
     /* stack nav links vertically */
     ul.navlist {
         flex-direction: column;
     }
+
     /* make navigation links larger for easy selection on touch screen */
-    .navlist > li {
+    .navlist>li {
         font-size: 1.2rem;
     }
 
 
     /* PAST PROJECTS */
     /* make the sections centered when the items are stacked vertically */
-    .blocktext, .videodisplay {
+    .blocktext,
+    .videodisplay {
         margin: 1rem auto;
     }
+
     /* make youtube videos fit to fill small screen */
     iframe {
         width: 100%;
     }
+
     /* align Past Projects heading to center */
     #pastprojects {
         margin: 0;
@@ -498,7 +532,7 @@ form button:hover {
 /* Printed pages */
 @media print {
 
-/* hide the whole navbar if printing */
+    /* hide the whole navbar if printing */
     nav {
         display: none;
     }

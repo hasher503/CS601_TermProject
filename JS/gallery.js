@@ -1,5 +1,5 @@
 /*
-Hope Asher
+Hope Neels
 CS 601 Term Project
 image gallery for Gallery page
 all Vue

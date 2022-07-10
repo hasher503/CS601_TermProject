@@ -1,5 +1,5 @@
 /* 
-Hope Asher
+Hope Neels
 CS 601 Term Project
 Demonstrating competency with vanilla JS and DOM manipulation-- no Vue in this file
 */
