@@ -9,7 +9,7 @@
 * CSS
 
 ## Overview
-This project is a mutli-page personal website designed to showcase the skills learned in CS601, including the following topics:
+This individual project is a multi-page personal website designed to showcase the skills I learned in CS601, including the following topics:
 * HTML5 including **semantic elements**
 * CSS: box model, inheritance, **accessibility**, aesthetics
 * Responsive design with media queries and **Flexbox**
